@@ -13,3 +13,7 @@ Add the following to your `.pre-commit-config.yaml` file:
 ```
 
 Be sure to check out the [pre-commit documentation](https://pre-commit.com/#pre-commit-configyaml---hooks) for additional configuration options.
+
+## Contributing
+
+Please consult the [contributing guidelines](https://github.com/stefmolin/modification-timekeeper/blob/main/CONTRIBUTING.md).
