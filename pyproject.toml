@@ -17,14 +17,15 @@ keywords = [
   "modification time",
   "pre-commit",
 ]
-license = { file = "LICENSE" }
+license = "MIT"
+license-files = [ "LICENSE" ]
 authors = [
   { name = "Stefanie Molin", email = "modification-timekeeper@stefaniemolin.com" },
 ]
 requires-python = ">=3.8"
 classifiers = [
   "Development Status :: 4 - Beta",
-  "License :: OSI Approved :: Apache Software License",
+  "License :: OSI Approved :: MIT License",
   "Programming Language :: Python",
   "Programming Language :: Python :: 3 :: Only",
   "Programming Language :: Python :: 3.8",
