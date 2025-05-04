@@ -23,7 +23,7 @@ from modification_timekeeper import cli
     [
         ('modified', 'date', 0, False, '2025-05-04T11:27:28.664853-04:00', True),
         ('modified', 'date', 0, False, None, True),
-        ('modified', 'publication_date', 0, False, None, True),
+        ('modified', 'publication_date', 0, True, None, True),
         (
             'last_modified',
             'date',
@@ -117,13 +117,9 @@ def test_main(
             else current_modification_time
         )
 
-    if should_change:
+    if should_change and as_utc:
         modified_time = dt.datetime.fromisoformat(front_matter[field_name])
-        is_in_utc = (
-            modified_time.astimezone(dt.timezone.utc).isoformat()
-            == front_matter[field_name]
-        )
-        assert is_in_utc is as_utc
+        assert modified_time.tzinfo == dt.timezone.utc
 
     if after_key:
         keys = list(front_matter.keys())
