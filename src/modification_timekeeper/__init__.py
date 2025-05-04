@@ -6,7 +6,7 @@ from pathlib import Path
 
 import yaml
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 
 def process_file(
