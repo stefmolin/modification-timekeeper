@@ -7,7 +7,7 @@ Add the following to your `.pre-commit-config.yaml` file:
 
 ```yaml
 - repo: https://github.com/stefmolin/modification-timekeeper
-  rev: 0.1.1
+  rev: 0.1.2
   hooks:
     - id: modification-timekeeper
 ```
@@ -16,7 +16,7 @@ You can also configure the name of the last modified field (`--field-name`), whi
 
 ```yaml
 - repo: https://github.com/stefmolin/modification-timekeeper
-  rev: 0.1.1
+  rev: 0.1.2
   hooks:
     - id: modification-timekeeper
       args: [--field-name=modified, --after-key=publication_date, --as-utc, --tolerance=30]
