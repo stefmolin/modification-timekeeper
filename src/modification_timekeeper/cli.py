@@ -41,6 +41,17 @@ def main(argv: Sequence[str] | None = None) -> int:
         '--version', action='version', version=f'%(prog)s {__version__}'
     )
     parser.add_argument(
+        '--field-name',
+        type=str,
+        default='last_modified',
+        help='Field name to update in front matter.',
+    )
+    parser.add_argument(
+        '--after-key',
+        type=str,
+        help="Key after which to insert the field if it isn't already in the front matter.",
+    )
+    parser.add_argument(
         '--tolerance',
         type=int,
         default=DEFAULT_TOLERANCE,
@@ -53,17 +64,6 @@ def main(argv: Sequence[str] | None = None) -> int:
         '--as-utc',
         action='store_true',
         help='Whether to use UTC for modification time.',
-    )
-    parser.add_argument(
-        '--after-key',
-        type=str,
-        help="Key after which to insert the field if it isn't already in the front matter.",
-    )
-    parser.add_argument(
-        '--field-name',
-        type=str,
-        required=True,
-        help='Field name to update in front matter.',
     )
 
     args = vars(parser.parse_args(argv))
